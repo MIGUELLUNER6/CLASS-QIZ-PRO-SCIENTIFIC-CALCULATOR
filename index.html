@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClassWiz Pro — Advanced Scientific Calculator</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.2.0/math.min.js"></script>
+</head><body>
+<main class="calc-shell">
+<header class="brand"><div><strong>CASIO</strong><span>CLASSWIZ-STYLE SCIENTIFIC</span></div><small>ADVANCED • fx SERIES INSPIRED</small></header>
+<div class="model-strip"><span>Natural Textbook Display</span><span>2nd edition</span></div>
+<section class="lcd">
+ <div class="lcd-top"><span id="modeTag">COMP</span><span id="angleTag">DEG</span><span id="battery">● READY</span></div>
+ <div id="lcdHistory" class="lcd-history"></div>
+ <div id="lcdExpr" class="lcd-expr">0</div><div id="lcdResult" class="lcd-result">0</div>
+ <div id="lcdStatus" class="lcd-status">Ready</div>
+</section>
+<div class="quickbar">
+ <button id="power" class="power">ON</button><button id="angle">DRG</button><button id="shift">SHIFT</button><button id="alpha">ALPHA</button><button id="memory">STO/M+</button><button id="historyToggle">HISTORY</button>
+</div>
+<nav id="modes" class="modes">
+ <button class="selected" data-mode="COMP">COMP</button><button data-mode="COMPLEX">CMPLX</button><button data-mode="STAT">STAT</button><button data-mode="TABLE">TABLE</button><button data-mode="MATRIX">MATRIX</button><button data-mode="VECTOR">VECTOR</button><button data-mode="BASE">BASE-N</button><button data-mode="EQN">EQN</button><button data-mode="CALC">CALC</button><button data-mode="PROB">PROB</button><button data-mode="CONVERT">CONVERT</button>
+</nav>
+<section class="workarea">
+ <div id="modePanel" class="mode-panel"></div>
+ <aside id="historyPanel" class="history-panel hidden"><div class="history-head"><b>Calculation history</b><button id="clearHistory">Clear history</button></div><div id="historyList"></div></aside>
+</section>
+<section class="keypad" id="keypad">
+ <button data-v="(">(</button><button data-v=")">)</button><button data-v=",">,</button><button data-v="Ans">Ans</button><button data-a="del" class="fn">DEL</button>
+ <button data-v="sin(">sin</button><button data-v="cos(">cos</button><button data-v="tan(">tan</button><button data-v="^2">x²</button><button data-v="^">xʸ</button>
+ <button data-v="asin(">sin⁻¹</button><button data-v="acos(">cos⁻¹</button><button data-v="atan(">tan⁻¹</button><button data-v="sqrt(">√</button><button data-v="cbrt(">∛</button>
+ <button data-v="log(">log</button><button data-v="ln(">ln</button><button data-v="exp(">eˣ</button><button data-v="10^(">10ˣ</button><button data-v="!">x!</button>
+ <button data-v="pi">π</button><button data-v="e">e</button><button data-v="i">i</button><button data-v="abs(">Abs</button><button data-v="mod(">mod</button>
+ <button data-v="7" class="num">7</button><button data-v="8" class="num">8</button><button data-v="9" class="num">9</button><button data-v="/" class="op">÷</button><button data-v="^(-1)" class="op">1/x</button>
+ <button data-v="4" class="num">4</button><button data-v="5" class="num">5</button><button data-v="6" class="num">6</button><button data-v="*" class="op">×</button><button data-v="sqrt(">√</button>
+ <button data-v="1" class="num">1</button><button data-v="2" class="num">2</button><button data-v="3" class="num">3</button><button data-v="-" class="op">−</button><button data-v="^3" class="op">x³</button>
+ <button data-v="0" class="num">0</button><button data-v="." class="num">.</button><button data-v="*" class="op">×</button><button data-v="+" class="op">+</button><button data-a="equals" class="equals">=</button>
+</section>
+<footer><span>fx-style scientific keypad</span><span>Use keyboard: Enter =, Esc = AC</span></footer>
+</main><script src="app.js"></script></body></html>
